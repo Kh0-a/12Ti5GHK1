@@ -1,0 +1,201 @@
+/* Làm đầy viền trang cho đẹp hơn :)) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial";
+    font-size: 1em;
+    background-color: #bebabac7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* 100% viewpoint height cho web đầy tab màn hình */
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+}
+header h1 {
+    margin-bottom: 10px;
+}
+
+navigation a {
+    color: #ffdd57;
+    text-decoration: none;
+    margin: 8.5px;
+    font-weight: bold;
+}
+
+navigation a:hover {
+    text-decoration: underline;
+}
+
+section.quiz_list {
+    display: flex;
+    justify-content: center; /*horizontal alignment*/
+    /*align-items: center; vertical alignment*/
+    gap: 20px;
+    padding: 40px;
+}
+
+.quiz_item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1); /*red green blue alpha (transparency)*/
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.quiz_item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+.quiz_item h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.quiz_item p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.quiz_item a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.quiz_item a:hover {
+    color: #1abc9c;
+}
+
+.quiz_container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.quiz_container h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.options label {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background: #f3f6fa;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.options label:hover {
+    background: #e2edf7;
+}
+
+.submit_btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit_btn:hover {
+    background: #1abc9c;
+}
+
+.result {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.correct {
+    color: #2ecc71;
+}
+
+.incorrect {
+    color: #e74c3c;
+}
+
+.result img {
+    width: 120px;
+    margin-top: 10px;
+}
+
+table {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+td {
+    vertical-align: top;
+    padding: 15px;
+}
+
+table, td, th {
+    border: none;
+}
+
+
+.col_info {
+    width: 70%;
+}
+
+.member_photo {
+    width: 70%;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+h4 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 15px;
+    font-size: 2em;
+}
+
+h5 {
+    text-align: center;
+    color: #34495e;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+

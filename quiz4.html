@@ -1,0 +1,72 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Câu 4: Nội năng</h1>
+        <navigation>
+            <a href="index.html">Trang chủ</a>
+            <a href="about.html">Giới thiệu</a>
+        </navigation>
+    </header>
+
+    <section class="quiz_container">
+        <h2>Nội năng của vật là:</h2>
+
+        <form id="quiz-form" class="options">
+            <label><input type="checkbox" name="answer" value="A"> Thế năng tương tác giữa các phân tử</label>
+            <label><input type="checkbox" name="answer" value="B"> Tổng động năng và thế năng tương tác của các phân tử cấu tạo nên vật</label>
+            <label><input type="checkbox" name="answer" value="C"> Động lượng của các phân tử cấu tạo nên vật</label>
+            <label><input type="checkbox" name="answer" value="D"> Độ biến thiên động năng của phân tử cấu tạo nên vật</label>
+
+            <button type="button" class="submit_btn" onclick="checkAnswer()">Xác nhận</button>
+        </form>
+
+        <div id="result" class="result"></div>
+    </section>
+
+    <footer>
+        <p>Một trang web được tạo bởi Vũ Nguyễn Đăng Khoa</p>
+    </footer>
+
+    <script>
+        /* Cho phép chỉ được chọn 1 checkbox */
+        const checkboxes = document.querySelectorAll('input[type="checkbox"][name="answer"]');
+        checkboxes.forEach(box => {
+            box.addEventListener('change', () => {
+                checkboxes.forEach(other => {
+                    if (other !== box) other.checked = false;
+                });
+            });
+        });
+
+        /* Check câu trả lời */
+        function checkAnswer() {
+            const result = document.getElementById('result');
+            const selected = document.querySelector('input[name="answer"]:checked');
+
+            if (!selected) {
+                result.innerHTML = `
+                    <p style="color:orange"> Chọn đi bạn ơi, bạn nghĩ bạn coi được đáp án khi chưa chọn à 🗿</p>
+                    <img src="https://raw.githubusercontent.com/Kh0-a/file-dump/refs/heads/main/JiyanFacepalm.gif" alt="Đúng rồi!">
+                `;
+                return;
+            }
+            if (selected.value === "B") {
+                result.innerHTML = `
+                    <p class="correct"> Đúng rồi ! Mà là đúng thật hay là đoán đại ? 🤔🤔</p>
+                    <img src="https://raw.githubusercontent.com/Kh0-a/file-dump/refs/heads/main/LupaWinner.gif" alt="Đúng rồi!">
+                `;
+            } else {
+                result.innerHTML = `
+                    <p class="incorrect"> Sai rồi ! Bạn QUÁ GÀ !!!</p>
+                    <img src="https://raw.githubusercontent.com/Kh0-a/file-dump/refs/heads/main/YouhuHAHA.gif" alt="Sai rồi!">
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
